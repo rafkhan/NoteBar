@@ -102,4 +102,19 @@ public class NoteBarActivity extends Activity {
 			this.updateNotification();
 		}
 	}
+
+	public void shareButton(View v) {
+		EditText textbodyField = (EditText) findViewById(R.id.textbody_field);
+		String textbody = textbodyField.getText().toString();
+		this.share(textbody);
+	}
+
+	public void share(String text) {
+		final Intent intent = new Intent(Intent.ACTION_SEND);
+
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_TEXT, text);
+
+		startActivity(Intent.createChooser(intent, "Share with..."));
+	}
 }
