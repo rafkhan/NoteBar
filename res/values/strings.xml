@@ -2,4 +2,7 @@
 <resources>
     <string name="hello">Hello World, NoteBarActivity!</string>
     <string name="app_name">NoteBar</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_as">Save as</string>
 </resources>
